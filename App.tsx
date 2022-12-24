@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/** @format */
+import React from 'react'
+import { StatusBar } from 'expo-status-bar'
+import 'react-native-reanimated'
+
+// user components
+import Navigation from './src/navigation/BottomNavigator'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import useCachedResources from './src/hooks/useCachedResources'
+
+import { Provider as ReduxProvider } from 'react-redux'
+import { store } from './src/state'
 
 export default function App() {
+  const isLoadingComplete = useCachedResources()
+  if (!isLoadingComplete) {
+    return null
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <ReduxProvider store={store}>
+      <SafeAreaProvider>
+        <StatusBar style='inverted' />
+        <Navigation />
+      </SafeAreaProvider>
+    </ReduxProvider>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
