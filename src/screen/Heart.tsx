@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 25,
+    fontSize: 15,
     fontFamily: Font.acmeRegular,
     color: 'rgb(256, 256, 256)',
   },

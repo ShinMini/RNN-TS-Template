@@ -31,7 +31,8 @@ export const screenOptions = ({ route }: { route: RouteProp<ParamListBase, strin
   return {
     headerShown: false,
     tabBarStyle: styles.bottomNavStyle,
-    tabBarLabelStyle: { fontSize: ICON_SIZE / 2, color: Colors.text },
+    tabBarLabelStyle: { color: Colors.text, top: NAV_HEIGHT / 1.7, position: 'absolute' },
+    tabBarIconStyle: { fontSize: ICON_SIZE },
     tabBarIcon: ({ focused, color, size }: TabBarIconProps) => {
       const { name } = route
       const focusedSize = focused ? size + 6 : size
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     width: NAV_WIDTH,
     height: NAV_HEIGHT,
     marginLeft: NAV_MARGIN,
-    marginBottom: NAV_MARGIN,
+    bottom: NAV_MARGIN * 2,
 
     backgroundColor: Colors.button,
 
@@ -58,8 +59,8 @@ const styles = StyleSheet.create({
 
     shadowColor: Colors.orange,
     shadowOffset: {
-      width: 0,
-      height: 7,
+      width: 2,
+      height: 11,
     },
     shadowOpacity: 0.41,
     shadowRadius: 9.11,

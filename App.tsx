@@ -10,11 +10,12 @@ import useCachedResources from './src/hooks/useCachedResources'
 
 import { Provider as ReduxProvider } from 'react-redux'
 import { store } from './src/state'
+import { View } from 'react-native'
 
 export default function App() {
   const isLoadingComplete = useCachedResources()
   if (!isLoadingComplete) {
-    return null
+    return <View />
   }
   return (
     <ReduxProvider store={store}>
