@@ -47,8 +47,6 @@ export const homeStyle = StyleSheet.create({
     fontSize: 50,
     color: Colors.white,
     fontFamily: Font.gilroyBold,
-
-    textAlign: 'left',
   },
   centerView: {
     flex: 1,
