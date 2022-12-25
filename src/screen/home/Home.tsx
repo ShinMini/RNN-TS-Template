@@ -2,7 +2,6 @@
 
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { useNavigation } from '@react-navigation/native'
 
 import { FlatList } from 'react-native-gesture-handler'
 import { RootStackParamList } from '../../../type'
@@ -12,7 +11,7 @@ import SlideBtn from './SlideBtn'
 
 export type ScreenProps = keyof RootStackParamList
 
-const SCREENS: ScreenProps[] = ['CarOfCar', 'Project1', 'Project2', 'Project3', 'Project4', 'Project5', 'Project6', 'Project7']
+const SCREENS: ScreenProps[] = ['CarInfo', 'InputList', 'Project1', 'Project2', 'Project3']
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0)

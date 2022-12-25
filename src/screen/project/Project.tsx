@@ -2,7 +2,7 @@
 
 import { Button, Text, View } from 'react-native'
 import React, { FC, memo, useRef } from 'react'
-import { styles } from './Prjoject.styles'
+import { styles } from './Project.styles'
 import LottieView from 'lottie-react-native'
 import bombAnim from './../../../assets/lottie/bomb-lottie.json'
 

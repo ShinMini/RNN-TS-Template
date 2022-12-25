@@ -6,7 +6,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { RootStackParamList } from '../../type'
 
 // screens
-import Home from '../screen/home/Home'
 import Heart from '../screen/Heart'
 import Setting from '../screen/Setting'
 

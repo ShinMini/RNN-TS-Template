@@ -31,7 +31,7 @@ export const screenOptions = ({ route }: { route: RouteProp<ParamListBase, strin
   return {
     headerShown: false,
     tabBarStyle: styles.bottomNavStyle,
-    tabBarLabelStyle: { color: Colors.text, top: NAV_HEIGHT / 1.7, position: 'absolute' },
+    tabBarLabelStyle: { color: Colors.text, top: NAV_HEIGHT - NAV_MARGIN + 5, position: 'absolute' },
     tabBarIconStyle: { fontSize: ICON_SIZE },
     tabBarIcon: ({ focused, color, size }: TabBarIconProps) => {
       const { name } = route
